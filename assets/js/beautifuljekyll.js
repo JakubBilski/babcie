@@ -15,13 +15,15 @@ var BeautifulJekyllJS = {
         } else {
             $(".navbar").removeClass("top-nav-short");
         }
-        console.log(this.oldScroll > this.scrollY);
-        if(this.oldScroll > this.scrollY) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+        var scroll = $(window).scrollTop();
+        console.log($(window).oldScroll);
+        console.log($(window).scroll);
+        if(this.oldScroll > scroll) {
+          $(window).scrollTo({ top: 0, behavior: 'smooth' });
         } else {
-          window.scrollTo({ bottom: 0, behavior: 'smooth' });
+          $(window).scrollTo({ top: 0, behavior: 'smooth' });
         }
-        this.oldScroll = this.scrollY;
+        $(window).oldScroll = $(window).scrollY;
     });
 
 
