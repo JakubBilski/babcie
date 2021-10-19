@@ -8,9 +8,8 @@ var BeautifulJekyllJS = {
   init : function() {
     $(".navbar").addClass("top-nav-short");
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
-    console.log($(document).height());
 
-    $("#image-1").mousemove(function(event){            
+    $("#container-1").mousemove(function(event){            
       var relX = event.pageX - $(this).offset().left;
       var relY = event.pageY - $(this).offset().top;
       var relBoxCoords = "(" + relX + "," + relY + ")";
