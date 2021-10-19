@@ -22,7 +22,9 @@ var BeautifulJekyllJS = {
           }, 2000);
         }
         if(scroll < oldScroll) {
-          $(window).scrollTop(0);
+          $("html, body").animate({
+            scrollTop: 0
+          }, 2000);
         }
         oldScroll = scroll;
     });
