@@ -14,11 +14,6 @@ var BeautifulJekyllJS = {
     $("#container-1").mousemove(function(event){
       var border1 = $(this).offset().left + $(this).width()/3;
       var border2 = $(this).offset().left + $(this).width()*2/3;
-      console.log(event.pageX);
-      console.log("Border1:");
-      console.log(border1);
-      console.log("Border2:");
-      console.log(border2);
       if(event.pageX < border1) {
         if(chosenImage != 0) {
           chosenImage = 0;
