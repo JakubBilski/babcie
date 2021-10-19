@@ -10,23 +10,26 @@ var BeautifulJekyllJS = {
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
     console.log($(document).height());
 
-    var oldScroll = 0;
+    // $([document.documentElement, document.body]).animate({
+    //   scrollTop: $("#elementtoScrollToID").offset().top
+    // }, 2000);
+
     $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if(scroll > oldScroll) {
-          $("html, body").animate({
-            scrollTop: $(
-              'html, body').get(0).scrollHeight
-          }, 700);
-          console.log("Scrolling down");
-        }
-        if(scroll < oldScroll) {
-          $("html, body").animate({
-            scrollTop: 0
-          }, 700);
-          console.log("Scrolling up");
-        }
-        oldScroll = scroll;
+        // var scroll = $(window).scrollTop();
+        // if(scroll > oldScroll) {
+        //   $("html, body").animate({
+        //     scrollTop: $(
+        //       'html, body').get(0).scrollHeight
+        //   }, 700);
+        //   console.log("Scrolling down");
+        // }
+        // if(scroll < oldScroll) {
+        //   $("html, body").animate({
+        //     scrollTop: 0
+        //   }, 700);
+        //   console.log("Scrolling up");
+        // }
+        // oldScroll = scroll;
     });
 
 
