@@ -22,7 +22,7 @@ var BeautifulJekyllJS = {
         if(scroll > oldScroll) {
           $(window).scrollTop(100);
         } else {
-          $(window).scrollTop(0);
+          $(window).scrollTop($(document).height);
         }
         oldScroll = scroll;
     });
