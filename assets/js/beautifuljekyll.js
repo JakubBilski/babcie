@@ -17,8 +17,6 @@ var BeautifulJekyllJS = {
       console.log(border1);
       console.log("Border2:");
       console.log(border2);
-      console.log("Border3:");
-      console.log(border3);
       if(event.pageX < border1) {
         if(chosenImage != 0) {
           chosenImage = 0;
