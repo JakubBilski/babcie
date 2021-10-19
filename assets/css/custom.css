@@ -35,3 +35,18 @@
     display: flex;
     justify-content: center;
   }
+  #image-1-right {
+      display: none;
+  }
+  #image-1-front {
+      display: none;
+  }
+  #image-2-right {
+      display: none;
+  }
+  #image-2-middleright {
+      display: none;
+  }
+  #image-2-middleleft {
+      display: none;
+  }

@@ -8,34 +8,75 @@ var BeautifulJekyllJS = {
   init : function() {
     $(".navbar").addClass("top-nav-short");
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
-    let chosenImage = 0;
-    $("#image-1-front").hide();
-    $("#image-1-right").hide();
+    let chosenImage1 = 0;
+    let chosenImage2 = 0;
     $("#container-1").mousemove(function(event){
       var border1 = $(this).offset().left + $(this).width()/3;
       var border2 = $(this).offset().left + $(this).width()*2/3;
       if(event.pageX < border1) {
-        if(chosenImage != 0) {
-          chosenImage = 0;
+        if(chosenImage1 != 0) {
+          chosenImage1 = 0;
           $("#image-1-front").hide();
           $("#image-1-right").hide();
           $("#image-1-left").show();
         }
       }
       else if(event.pageX < border2) {
-        if(chosenImage != 1) {
-          chosenImage = 1;
+        if(chosenImage1 != 1) {
+          chosenImage1 = 1;
           $("#image-1-left").hide();
           $("#image-1-right").hide();
           $("#image-1-front").show();
         }
       }
       else {
-        if(chosenImage != 2) {
-          chosenImage = 2;
+        if(chosenImage1 != 2) {
+          chosenImage1 = 2;
           $("#image-1-left").hide();
           $("#image-1-front").hide();
           $("#image-1-right").show();
+        }
+      }
+    });
+
+    $("#container-2").mousemove(function(event){
+      var border1 = $(this).offset().left + $(this).width()/4;
+      var border2 = $(this).offset().left + $(this).width()/2;
+      var border3 = $(this).offset().left + $(this).width()*3/4;
+      if(event.pageX < border1) {
+        if(chosenImage2 != 0) {
+          chosenImage2 = 0;
+          $("#image-2-middleleft").hide();
+          $("#image-2-middleright").hide();
+          $("#image-2-right").hide();
+          $("#image-2-left").show();
+        }
+      }
+      else if(event.pageX < border2) {
+        if(chosenImage2 != 1) {
+          chosenImage2 = 1;
+          $("#image-2-left").hide();
+          $("#image-2-middleright").hide();
+          $("#image-2-right").hide();
+          $("#image-2-middleleft").show();
+        }
+      }
+      else if(event.pageX < border3) {
+        if(chosenImage2 != 2) {
+          chosenImage2 = 2;
+          $("#image-2-left").hide();
+          $("#image-2-middleleft").hide();
+          $("#image-2-right").hide();
+          $("#image-2-middleright").show();
+        }
+      }
+      else {
+        if(chosenImage2 != 3) {
+          chosenImage2 = 3;
+          $("#image-2-left").hide();
+          $("#image-2-middleleft").hide();
+          $("#image-2-middleright").hide();
+          $("#image-2-right").show();
         }
       }
     });
