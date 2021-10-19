@@ -8,6 +8,7 @@ var BeautifulJekyllJS = {
   init : function() {
     $(".navbar").addClass("top-nav-short");
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
+    console.log($(document).height);
 
     var oldScroll = 0;
     $(window).scroll(function() {
