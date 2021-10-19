@@ -9,6 +9,8 @@ var BeautifulJekyllJS = {
     $(".navbar").addClass("top-nav-short");
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
     let chosenImage = 0;
+    $("#image-1-front").hide();
+    $("#image-1-right").hide();
     $("#container-1").mousemove(function(event){            
       var border1 = $(this).offset().left + ($(this).offset().right - $(this).offset().left)*0.33;
       var border2 = $(this).offset().left + ($(this).offset().right - $(this).offset().left)*0.66;
