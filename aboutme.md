@@ -1,10 +1,9 @@
 ---
 layout: page
-title: O autorce
+title: Halo jak tu sie daje marginesy
 ---
 
-Marta Bilska,
-studentka drugiego roku największej uczelni artystycznej stolicy górnego śląska
+Marta Bilska prosze bardzo
 
 - kawior
 - pierogi z Żabki
