@@ -12,8 +12,8 @@ var BeautifulJekyllJS = {
     $("#image-1-front").hide();
     $("#image-1-right").hide();
     $("#container-1").mousemove(function(event){
-      var border1 = $(this).offset().left + $(this).offset().width()/3;
-      var border2 = $(this).offset().left + $(this).offset().width()*2/3;
+      var border1 = $(this).offset().left + $(this).width()/3;
+      var border2 = $(this).offset().left + $(this).width()*2/3;
       console.log(event.pageX);
       console.log("Border1:");
       console.log(border1);
