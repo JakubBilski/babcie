@@ -13,6 +13,7 @@
     height: 100vh;
     scroll-snap-align: start;
     text-align: center;
+    align-content: center;
     position: relative;
   }
   h1  {
