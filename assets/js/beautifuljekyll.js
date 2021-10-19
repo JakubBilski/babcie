@@ -18,10 +18,10 @@ var BeautifulJekyllJS = {
         var scroll = $(window).scrollTop();
         console.log($(window).oldScroll);
         console.log(scroll);
-        if(this.oldScroll > scroll) {
-          $(window).scrollTo({ top: 0, behavior: 'smooth' });
+        if(scroll) {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
         } else {
-          $(window).scrollTo({ top: 0, behavior: 'smooth' });
+          $("html, body").animate({ scrollTop: 0 }, "slow");
         }
         $(window).oldScroll = scroll;
     });
