@@ -19,7 +19,7 @@ var BeautifulJekyllJS = {
         console.log($(window).oldScroll);
         console.log(scroll);
         if(scroll > oldScroll) {
-          $(window).scrollTop(0);
+          $(window).scrollTop($(document).height());
         } else {
           $(window).scrollTop(0);
         }
