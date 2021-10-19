@@ -10,8 +10,8 @@ var BeautifulJekyllJS = {
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
     let chosenImage = 0;
     $("#container-1").mousemove(function(event){            
-      var border1 = ($(this).offset().left + $(this).offset().right);
-      var border2 = ($(this).offset().left + $(this).offset().right);
+      var border1 = $(this).offset().left + ($(this).offset().right - $(this).offset().left)*0.33;
+      var border2 = $(this).offset().left + ($(this).offset().right - $(this).offset().left)*0.66;
       if(event.pageX < border1) {
         if(chosenImage != 0) {
           chosenImage = 0;
