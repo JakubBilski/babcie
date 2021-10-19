@@ -16,12 +16,12 @@ var BeautifulJekyllJS = {
             $(".navbar").removeClass("top-nav-short");
         }
         var scroll = $(window).scrollTop();
-        console.log($(window).oldScroll);
+        console.log(oldScroll);
         console.log(scroll);
         if(scroll > oldScroll) {
-          $(window).scrollTop($(document).height());
+          $(window).scrollTop(100);
         } else {
-          $(window).scrollTop($(document).height());
+          $(window).scrollTop(0);
         }
         let oldScroll = scroll;
     });
