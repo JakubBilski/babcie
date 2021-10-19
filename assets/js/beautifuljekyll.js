@@ -15,7 +15,15 @@ var BeautifulJekyllJS = {
         } else {
             $(".navbar").removeClass("top-nav-short");
         }
+        console.log(this.oldScroll > this.scrollY);
+        if(this.oldScroll > this.scrollY) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ bottom: 0, behavior: 'smooth' });
+        }
+        this.oldScroll = this.scrollY;
     });
+
 
     // On mobile, hide the avatar when expanding the navbar menu
     $('#main-navbar').on('show.bs.collapse', function () {
