@@ -6,23 +6,19 @@ var BeautifulJekyllJS = {
   numImgs : null,
 
   init : function() {
+    $(".navbar").addClass("top-nav-short");
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
 
     var oldScroll = 0;
-    // Shorten the navbar after scrolling a little bit down
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar").addClass("top-nav-short");
-        } else {
-            $(".navbar").removeClass("top-nav-short");
-        }
         var scroll = $(window).scrollTop();
         console.log(oldScroll);
         console.log(scroll);
         if(scroll > oldScroll) {
-          $(window).scrollTop(100);
-        } else {
           $(window).scrollTop($(document).height);
+        }
+        if(scroll < oldScroll) {
+          $(window).scrollTop(0);
         }
         oldScroll = scroll;
     });
