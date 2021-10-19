@@ -1,16 +1,14 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: O autorce
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Marta Bilska,
+studentka drugiego roku największej uczelni artystycznej stolicy górnego śląska
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- kawior
+- pierogi z Żabki
 
-What else do you need?
+### Nagroda Nobla z dziedziny fizyki
 
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Jeszcze gdy chodziłem do podstawówki, to był tam taki Paweł, i ja jechałem na rowerze, i go spotkałem, i potem jeszcze pojechałem do biedronki na lody, i po drodze do domu wtedy jeszcze, już do domu pojechałem.
