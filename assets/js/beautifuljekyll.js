@@ -15,25 +15,25 @@ var BeautifulJekyllJS = {
       if(event.pageX < border1) {
         if(chosenImage != 0) {
           chosenImage = 0;
-          $("#image-1-left").attr("hidden",false);
-          $("#image-1-front").attr("hidden",true);
-          $("#image-1-right").attr("hidden",true);
+          $("#image-1-front").hide();
+          $("#image-1-right").hide();
+          $("#image-1-left").show();
         }
       }
       else if(event.pageX < border2) {
         if(chosenImage != 1) {
           chosenImage = 1;
-          $("#image-1-left").attr("hidden",true);
-          $("#image-1-front").attr("hidden",false);
-          $("#image-1-right").attr("hidden",true);
+          $("#image-1-left").hide();
+          $("#image-1-right").hide();
+          $("#image-1-front").show();
         }
       }
       else {
         if(chosenImage != 2) {
           chosenImage = 2;
-          $("#image-1-left").attr("hidden",true);
-          $("#image-1-front").attr("hidden",true);
-          $("#image-1-right").attr("hidden",false);
+          $("#image-1-left").hide();
+          $("#image-1-front").hide();
+          $("#image-1-right").show();
         }
       }
     });
