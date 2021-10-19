@@ -2,8 +2,6 @@
 layout: page
 ---
 
-{{ content }}
-
 <nav>
   <a href="#page-1">1</a>
   <a href="#page-2">2</a>
@@ -11,14 +9,12 @@ layout: page
 </nav>
 
 <div class="scroll-container">
-  <div class="scroll-page" id="page-1">1</div>
-  <div class="scroll-page" id="page-2">2</div>
-  <div class="scroll-page" id="page-3">3</div>
-  <div class="scroll-page" id="page-4">4</div>
-  <div class="scroll-page" id="page-5">5</div>
-  <div class="scroll-page" id="page-6">6</div>
-  <div class="scroll-page" id="page-7">7</div>
+  <section class="child" id="page-1"></section>
+  <section class="child" id="page-2"></section>
+  <section class="child" id="page-3"></section>
 </div>
+
+<link rel="stylesheet" href="custom.css">
 
 <!-- 
 {% assign posts = paginator.posts | default: site.posts %}
