@@ -12,15 +12,18 @@ var BeautifulJekyllJS = {
     let chosenImage2 = 0;
     $("#container-1").mousemove(function(event){
       newChosenImage = Math.floor(9*(event.pageX - $(this).offset().left) / $(this).width())
+      console.log(newChosenImage);
+      console.log(chosenImage1);
+      console.log(" ");
       if(newChosenImage != chosenImage1) {
         chosenImage1 = newChosenImage;
-        $(`#image-1-${newChosenImage+1}`).show();
         for (step = 0; step < chosenImage1; step++) {
           $(`#image-1-${newChosenImage+1}`).hide();
         }
         for (step = chosenImage1+1; step < 9; step++) {
           $(`#image-1-${newChosenImage+1}`).hide();
         }
+        $(`#image-1-${newChosenImage+1}`).show();
       }
     });
 
