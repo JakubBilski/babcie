@@ -11,30 +11,15 @@ var BeautifulJekyllJS = {
     let chosenImage1 = 0;
     let chosenImage2 = 0;
     $("#container-1").mousemove(function(event){
-      var border1 = $(this).offset().left + $(this).width()/3;
-      var border2 = $(this).offset().left + $(this).width()*2/3;
-      if(event.pageX < border1) {
-        if(chosenImage1 != 0) {
-          chosenImage1 = 0;
-          $("#image-1-front").hide();
-          $("#image-1-right").hide();
-          $("#image-1-left").show();
+      newChosenImage = Math.floor(9*(event.pageX - $(this).offset().left) / $(this).width())
+      if(newChosenImage != chosenImage1) {
+        chosenImage1 = newChosenImage;
+        $(`#image-1-${newChosenImage+1}`).show();
+        for (step = 0; step < chosenImage1; step++) {
+          $(`#image-1-${newChosenImage+1}`).hide();
         }
-      }
-      else if(event.pageX < border2) {
-        if(chosenImage1 != 1) {
-          chosenImage1 = 1;
-          $("#image-1-left").hide();
-          $("#image-1-right").hide();
-          $("#image-1-front").show();
-        }
-      }
-      else {
-        if(chosenImage1 != 2) {
-          chosenImage1 = 2;
-          $("#image-1-left").hide();
-          $("#image-1-front").hide();
-          $("#image-1-right").show();
+        for (step = chosenImage1+1; step < 9; step++) {
+          $(`#image-1-${newChosenImage+1}`).hide();
         }
       }
     });
