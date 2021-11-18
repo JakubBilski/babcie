@@ -1,5 +1,15 @@
 // Dean Attali / Beautiful Jekyll 2020
 
+function showOnlyOne(prefix, maxId, showId) {
+  for (step = 0; step < showId; step++) {
+    $(`${prefix}${step+1}`).hide();
+  }
+  for (step = showId+1; step < maxId; step++) {
+    $(`${prefix}${step+1}`).hide();
+  }
+  $(`${prefix}${showId+1}`).show();
+}
+
 var BeautifulJekyllJS = {
 
   bigImgEl : null,
@@ -8,22 +18,22 @@ var BeautifulJekyllJS = {
   init : function() {
     $(".navbar").addClass("top-nav-short");
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
+    showOnlyOne("#image-1-", 10, 5)
     let chosenImage1 = 0;
     let chosenImage2 = 0;
     $("#container-1").mousemove(function(event){
-      newChosenImage = Math.floor(9*(event.pageX - $(this).offset().left) / $(this).width())
+      newChosenImage = Math.floor(10*(event.pageX - $(this).offset().left) / $(this).width())
+      if (newChosenImage > 9) {
+        newChosenImage = 9;
+      } else if(newChosenImage < 0) {
+        newChosenImage = 0;
+      }
       console.log(newChosenImage);
       console.log(chosenImage1);
       console.log(" ");
       if(newChosenImage != chosenImage1) {
         chosenImage1 = newChosenImage;
-        for (step = 0; step < chosenImage1; step++) {
-          $(`#image-1-${newChosenImage+1}`).hide();
-        }
-        for (step = chosenImage1+1; step < 9; step++) {
-          $(`#image-1-${newChosenImage+1}`).hide();
-        }
-        $(`#image-1-${newChosenImage+1}`).show();
+        showOnlyOne("#image-1-", 10, chosenImage1);
       }
     });
 
