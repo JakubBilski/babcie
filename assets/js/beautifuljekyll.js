@@ -25,7 +25,7 @@ var BeautifulJekyllJS = {
     $("#container-1").mousemove(function(event){
       newChosenImage = Math.floor(numImages*(event.pageX - $(this).offset().left) / $(this).width())
       if (newChosenImage > numImages-1) {
-        newChosenImage = numImages;
+        newChosenImage = numImages-1;
       } else if(newChosenImage < 0) {
         newChosenImage = 0;
       }
