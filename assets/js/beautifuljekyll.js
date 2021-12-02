@@ -17,14 +17,15 @@ var BeautifulJekyllJS = {
 
   init : function() {
     $(".navbar").addClass("top-nav-short");
-    setTimeout(BeautifulJekyllJS.initNavbar, 10);
-    showOnlyOne("#image-1-", 10, 5)
+    let numImages = 19;
+    setTimeout(BeautifulJekyllJS.initNavbar, numImages);
+    showOnlyOne("#image-1-", numImages, 5)
     let chosenImage1 = 0;
     let chosenImage2 = 0;
     $("#container-1").mousemove(function(event){
-      newChosenImage = Math.floor(10*(event.pageX - $(this).offset().left) / $(this).width())
-      if (newChosenImage > 9) {
-        newChosenImage = 9;
+      newChosenImage = Math.floor(numImages*(event.pageX - $(this).offset().left) / $(this).width())
+      if (newChosenImage > numImages-1) {
+        newChosenImage = numImages;
       } else if(newChosenImage < 0) {
         newChosenImage = 0;
       }
@@ -33,7 +34,7 @@ var BeautifulJekyllJS = {
       console.log(" ");
       if(newChosenImage != chosenImage1) {
         chosenImage1 = newChosenImage;
-        showOnlyOne("#image-1-", 10, chosenImage1);
+        showOnlyOne("#image-1-", numImages, chosenImage1);
       }
     });
 
