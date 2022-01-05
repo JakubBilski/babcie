@@ -16,7 +16,7 @@ var BeautifulJekyllJS = {
   numImgs : null,
 
   init : function() {
-    $(".navbar").addClass("top-nav-short");
+    // $(".navbar").addClass("top-nav-short");
     let numImages = 19;
     setTimeout(BeautifulJekyllJS.initNavbar, numImages);
     showOnlyOne("#image-1-", numImages, 5)
