@@ -10,6 +10,29 @@ function showOnlyOne(prefix, maxId, showId) {
   $(`${prefix}${showId+1}`).show();
 }
 
+var audio = new Audio("https://raw.githubusercontent.com/jakubbilski/babcie/gh-pages/assets/mp3/background_music.mp3");
+audio.loop = true;
+
+$('#play-pause-button').on("click",function(){
+  if($(this).hasClass('fa-play'))
+   {
+     $(this).removeClass('fa-play');
+     $(this).addClass('fa-pause');
+     audio.play();
+   }
+  else
+   {
+     $(this).removeClass('fa-pause');
+     $(this).addClass('fa-play');
+     audio.pause();
+   }
+});
+
+audio.onended = function() {
+     $("#play-pause-button").removeClass('fa-pause');
+     $("#play-pause-button").addClass('fa-play');
+};
+
 // function mp3_embed() {
 //   var p = document.getElementsByTagName('p');
 //   for(var i = 0; i < p.length; i++) {

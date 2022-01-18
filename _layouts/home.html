@@ -4,8 +4,6 @@ layout: page
 
 {{content}}
 
-{% include embed_audio.html src="https://raw.githubusercontent.com/jakubbilski/babcie/gh-pages/assets/mp3/background_music.mp3" %}
-
 <div class="image-container" id="container-1">
   <img src="{{ 'assets/img/image1.jpg' | relative_url }}" alt="Not found" id="image-1-1"/>
   <img src="{{ 'assets/img/image2.jpg' | relative_url }}" alt="Not found" id="image-1-2"/>
@@ -27,6 +25,10 @@ layout: page
   <img src="{{ 'assets/img/image18.jpg' | relative_url }}" alt="Not found" id="image-1-18"/>
   <img src="{{ 'assets/img/image19.jpg' | relative_url }}" alt="Not found" id="image-1-19"/>
 </div>
+
+<!-- {% include embed_audio.html src="https://raw.githubusercontent.com/jakubbilski/babcie/gh-pages/assets/mp3/background_music.mp3" %} -->
+
+<a id="play-pause-button" class="fa fa-play"></a>
 
 <!-- 
 {% assign posts = paginator.posts | default: site.posts %}
